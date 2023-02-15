@@ -36,15 +36,15 @@ button.addEventListener("mouseout", function () {
 // Función musica"
 const invitation = document.querySelector(".invitation");
 
-const miMusica = document.getElementById("id-musica");
+const idMusica = document.getElementById("id-musica");
 
-miMusica.play();
+idMusica.play();
 
 invitation.addEventListener("click", function () {
-    if (miMusica.paused) {
-        miMusica.play();
+    if (idMusica.paused) {
+        idMusica.play();
     }
     else {
-        miMusica.pause();
+        idMusica.pause();
     }
 });
