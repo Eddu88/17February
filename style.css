@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Clicker+Script');
+
+* {
+    user-select: none;
+}
+
+:root {
+    --particle-size: 0;
+    --particle-opacity: 0;
+}
+
+#main-page {
+    background: #00A7E1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    font-family: 'Clicker Script', cursive;
+}
+
+.invitation {
+    width: 85%;
+    max-width: 400px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.invitation img {
+    width: 100%;
+    opacity: 0.8;
+}
+
+.invitation-text {
+    width: 50%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.invitation-name {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.invitation-date {
+    font-size: 30px;
+}
+
+.invitation-title {
+    color: #fff;
+    font-size: 40px;
+    margin-top: 1rem;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.arrow-button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    font-size: 60px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10%;
+    left: 47%;
+}
+
+.arrow-button::before {
+    content: '\2192';
+    /* Código Unicode para la flecha */
+    margin-left: 10px;
+}
+
+.arrow-button:hover {
+    animation: arrow-animation 0.7s ease infinite alternate;
+}
+
+@keyframes arrow-animation {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(10px);
+    }
+}
+
+@media only screen and (max-width: 628px) {
+    .invitation {
+        width: 85%;
+        max-width: 400px;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+    }
+
+    .invitation-title {
+        width: 85%;
+        text-align: center;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .arrow-button {
+        left: 36%;
+        animation: arrow-animation 0.7s ease infinite alternate;
+    }
+
+    @keyframes arrow-animation {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(10px);
+        }
+    }
+}
+
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    animation: particle-animation 30s infinite;
+    opacity: var(--particle-opacity);
+    height: var(--particle-size);
+    width: var(--particle-size);
+    background: #fff;
+}
+
+/* Generar los keyframes para cada partícula */
+@keyframes particle-animation {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(calc(var(--random-x) * 100vw),
+                calc(var(--random-y) * 100vh),
+                calc(var(--random-z) * 100px));
+    }
+}

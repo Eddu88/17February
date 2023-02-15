@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación para el primer mes y Día de San Valentín</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="main-page">
+        <div id="particle-container">
+            <div class="particle" v-for="n in 50" :key="n"></div>
+        </div>
+        <div class="invitation">
+            <audio id="miMusica" src="assets/Feid - Amor De Mi Vida - edit.mp3"></audio>
+            <img src="assets/circular-flowers.svg" alt="Flores circulares">
+            <div class="invitation-text">
+                <div class="invitation-name">Angie &amp; Victor</div>
+                <div class="invitation-date">17 de Febrero</div>
+            </div>
+        </div>
+        <div class="invitation-title">Te invito a pasar nuestro primer mes y día de San Valentín juntos el 17 de febrero
+        </div>
+        <a href="https://goo.gl/maps/EujKboq77Fr2BzBu9" target="_blank" title="Enviar a ubicacion" class="arrow-button"></a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
