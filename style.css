@@ -60,6 +60,7 @@
     font-size: 40px;
     margin-top: 1rem;
     position: absolute;
+    text-align: center;
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -67,7 +68,7 @@
 
 .arrow-button {
     background-color: transparent;
-    color: #fff;
+    color: #ffffffc0;
     border: none;
     text-decoration: none;
     font-size: 60px;
@@ -75,7 +76,7 @@
     cursor: pointer;
     position: absolute;
     bottom: 10%;
-    left: 47%;
+    left: 48%;
 }
 
 .arrow-button::before {
@@ -90,7 +91,7 @@
 
 @keyframes arrow-animation {
     from {
-        transform: translateX(0);
+        transform: translateX(-10px);
     }
 
     to {
@@ -106,7 +107,7 @@
         top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: #fff;
+        color: #ffffffc0;
     }
 
     .invitation-title {
@@ -118,7 +119,8 @@
     }
 
     .arrow-button {
-        left: 36%;
+        top: 85%;
+        left: 68%;
         animation: arrow-animation 0.7s ease infinite alternate;
     }
 
