@@ -39,6 +39,9 @@ const invitation = document.querySelector(".invitation");
 // Obtenemos el elemento HTML de audio
 const miMusica = document.getElementById("miMusica");
 
+// Iniciamos la reproducción de la música
+miMusica.play();
+
 // Agregamos un evento al hacer clic en la clase "invitation"
 invitation.addEventListener("click", function () {
     // Si la música está pausada, la reproducimos
