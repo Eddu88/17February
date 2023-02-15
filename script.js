@@ -33,22 +33,17 @@ button.addEventListener("mouseout", function () {
     date.style.display = "block";
 });
 
-// Obtenemos el elemento HTML de la clase "invitation"
+// Función musica"
 const invitation = document.querySelector(".invitation");
 
-// Obtenemos el elemento HTML de audio
-const miMusica = document.getElementById("miMusica");
+const miMusica = document.getElementById("id-musica");
 
-// Iniciamos la reproducción de la música
 miMusica.play();
 
-// Agregamos un evento al hacer clic en la clase "invitation"
 invitation.addEventListener("click", function () {
-    // Si la música está pausada, la reproducimos
     if (miMusica.paused) {
         miMusica.play();
     }
-    // Si la música está reproduciendo, la pausamos
     else {
         miMusica.pause();
     }
